@@ -1,0 +1,104 @@
+{
+  "Delsey1(1)": {
+    "_comment:": "Simplest 1 week ahead prediction on non-interpolated data",
+    "OUTPUT_LEN" : 1,
+    "NUM_UNITS" : 8,
+    "NUM_HIDDEN_LAYERS": 0,
+    "DROPOUT": true,
+    "DROPOUT_RATE": 0.4,
+    "NUM_INPUT_CLASSES" : 2,
+    "LOOKBACK" : 3,
+    "TRAINING_EPOCHS" : 5000,
+    "DATA_SPLIT_RATIO": 0.7,
+    "DATA_PATHS": [
+                     "./data/redact_dfr_2019-07-23_14_34_52.csv",
+                     "./data/redact_poqty_2019-07-23_14_34_52.csv"
+                    ],
+    "DEFAULT_COLUMN": "FTY"
+  },
+  "Delsey1(2)": {
+    "_comment:": "Same as simple 1 but with 2 weeks ahead predictions",
+    "OUTPUT_LEN" : 2,
+    "NUM_UNITS" : 16,
+    "NUM_HIDDEN_LAYERS": 0,
+    "DROPOUT": true,
+    "DROPOUT_RATE": 0.5,
+    "NUM_INPUT_CLASSES" : 2,
+    "LOOKBACK" : 4,
+    "TRAINING_EPOCHS" : 5000,
+    "DATA_SPLIT_RATIO": 0.6,
+    "DATA_PATHS": [
+                     "./data/redact_dfr_2019-07-23_14_34_52.csv",
+                     "./data/redact_poqty_2019-07-23_14_34_52.csv"
+                    ],
+    "DEFAULT_COLUMN": "FTY"
+  },
+  "Puma-Footwear-Interp7": {
+    "_comment:": "puma",
+    "OUTPUT_LEN" : 7,
+    "NUM_UNITS" : 24,
+    "NUM_HIDDEN_LAYERS": 0,
+    "DROPOUT": true,
+    "DROPOUT_RATE": 0.5,
+    "NUM_INPUT_CLASSES" : 2,
+    "LOOKBACK" : 21,
+    "TRAINING_EPOCHS" : 2500,
+    "DATA_SPLIT_RATIO": 0.40,
+    "DATA_PATHS": [
+                     "./data/redact_dfr-interp_2019-07-23_15_07_10.csv",
+                     "./data/redact_poqty-interp_2019-07-23_15_07_10.csv"
+                    ],
+    "DEFAULT_COLUMN": "FVNSJ"
+  },
+  "Delsey-Interp(7)": {
+    "_comment:": "Classic implementation of TDNet, predicts next week using interpolation/smoothing technique",
+    "OUTPUT_LEN" : 7,
+    "NUM_UNITS" : 24,
+    "NUM_HIDDEN_LAYERS": 0,
+    "DROPOUT": true,
+    "DROPOUT_RATE": 0.5,
+    "NUM_INPUT_CLASSES" : 2,
+    "LOOKBACK" : 21,
+    "TRAINING_EPOCHS" : 2500,
+    "DATA_SPLIT_RATIO": 0.6,
+    "DATA_PATHS": [
+                     "./data/redact_interp_2019-07-19_14_01_01.csv",
+                     "./data/redact_poqty-interp_2019-07-19_14_01_01.csv"
+                    ],
+    "DEFAULT_COLUMN": "FTY"
+  },
+  "Delsey-Interp(14)": {
+    "_comment:": "Experimental version of interpolation model",
+    "OUTPUT_LEN" : 14,
+    "NUM_UNITS" : 16,
+    "NUM_HIDDEN_LAYERS": 0,
+    "DROPOUT": true,
+    "DROPOUT_RATE": 0.5,
+    "NUM_INPUT_CLASSES" : 2,
+    "LOOKBACK" : 14,
+    "TRAINING_EPOCHS" : 2500,
+    "DATA_SPLIT_RATIO": 0.75,
+    "DATA_PATHS": [
+                     "./data/redact_interp_2019-07-19_14_01_01.csv",
+                     "./data/redact_poqty-interp_2019-07-19_14_01_01.csv"
+                    ],
+    "DEFAULT_COLUMN": "FTY"
+  },
+  "Delsey-Interp(28)": {
+    "_comment:": "Extremely experimental 1 month ahead prediction, does not work well",
+    "OUTPUT_LEN" : 28,
+    "NUM_UNITS" : 32,
+    "NUM_HIDDEN_LAYERS": 0,
+    "DROPOUT": true,
+    "DROPOUT_RATE": 0.5,
+    "NUM_INPUT_CLASSES" : 2,
+    "LOOKBACK" : 14,
+    "TRAINING_EPOCHS" : 5000,
+    "DATA_SPLIT_RATIO": 0.8,
+    "DATA_PATHS": [
+                     "./data/redact_interp_2019-07-19_14_01_01.csv",
+                     "./data/redact_poqty-interp_2019-07-19_14_01_01.csv"
+                    ],
+    "DEFAULT_COLUMN": "FTY"
+  }
+}
